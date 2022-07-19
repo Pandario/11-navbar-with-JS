@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    color: whitesmoke;
+}
+
+.brand-name {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.navbar-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-menu li:hover {
+    background-color: rgb(130, 130, 130);
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    height: 20px;
+    width: 30px;
+}
+
+.toggle-button .bar {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-menu ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-menu ul li {
+        text-align: right;
+    }
+
+    .navbar-menu li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
